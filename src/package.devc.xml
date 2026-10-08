@@ -6,6 +6,7 @@
     <CTEXT>Pedidos de Compras - Pacote Principal da Aplicação</CTEXT>
     <LANGUAGE>P</LANGUAGE>
     <MASTERLANG>P</MASTERLANG>
+    <PACKKIND>5</PACKKIND>
     <SRV_CHECK>X</SRV_CHECK>
    </DEVC>
   </asx:values>
