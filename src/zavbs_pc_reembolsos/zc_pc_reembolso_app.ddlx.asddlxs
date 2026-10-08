@@ -1,0 +1,102 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName:       'Reembolso',
+                typeNamePlural: 'Reembolsos',
+                title:          { type: #STANDARD, value: 'NumeroPedido' },
+                description:    { type: #STANDARD, value: 'NomeCliente' } },
+  presentationVariant: [{ sortOrder: [{ by: 'DataSolicitacao', direction: #DESC }],
+                          visualizations: [{ type: #AS_LINEITEM }] }]
+}
+annotate entity ZC_PC_REEMBOLSO_APP with
+{
+  @UI.facet: [
+    { id: 'DadosReembolso', purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'Reembolso', position: 10 }
+  ]
+
+  @UI.hidden: true
+  ReembolsoUUID;
+  @UI.hidden: true
+  PedidoUUID;
+  @UI.hidden: true
+  ClienteUUID;
+
+  @UI: { lineItem:       [{ type: #FOR_ACTION, dataAction: 'AprovarReembolso', label: 'Aprovar', position: 10,
+                            importance: #HIGH },
+                          { type: #FOR_ACTION, dataAction: 'RejeitarReembolso', label: 'Rejeitar', position: 20,
+                            importance: #HIGH },
+                          { position: 10, label: 'Pedido', importance: #HIGH }],
+         identification: [{ type: #FOR_ACTION, dataAction: 'AprovarReembolso', label: 'Aprovar reembolso',
+                            position: 1 },
+                          { type: #FOR_ACTION, dataAction: 'RejeitarReembolso', label: 'Rejeitar reembolso',
+                            position: 2 },
+                          { position: 5, label: 'Pedido' }],
+         selectionField: [{ position: 10 }] }
+  @EndUserText.label: 'Pedido'
+  NumeroPedido;
+
+  @UI: { lineItem: [{ position: 15, label: 'Cliente', importance: #HIGH }],
+         identification: [{ position: 7, label: 'Cliente' }],
+         selectionField: [{ position: 20 }] }
+  @EndUserText.label: 'Cliente'
+  NomeCliente;
+
+  @UI: { lineItem:       [{ position: 20, label: 'Status', criticality: 'StatusReembolsoCriticality', importance: #HIGH }],
+         identification: [{ position: 10, label: 'Status', criticality: 'StatusReembolsoCriticality' }],
+         selectionField: [{ position: 30 }] }
+  @EndUserText.label: 'Status do reembolso'
+  StatusReembolso;
+  @UI.hidden: true
+  StatusReembolsoTexto;
+  @UI.hidden: true
+  StatusReembolsoCriticality;
+
+  @UI.identification: [{ position: 15, label: 'Status anterior do pedido' }]
+  @EndUserText.label: 'Status anterior do pedido'
+  StatusPedidoAnterior;
+
+  @UI.hidden: true
+  Currency;
+
+  @UI: { lineItem: [{ position: 25, label: 'Valor' }], identification: [{ position: 20, label: 'Valor do reembolso' }] }
+  @EndUserText.label: 'Valor do reembolso'
+  ValorReembolso;
+
+  @UI: { lineItem: [{ position: 30, label: 'Motivo da solicitação' }],
+         identification: [{ position: 30, label: 'Motivo da solicitação' }] }
+  @UI.multiLineText: true
+  @EndUserText.label: 'Motivo da solicitação'
+  MotivoSolicitacao;
+
+  @UI: { lineItem: [{ position: 40, label: 'Solicitado em' }], identification: [{ position: 40, label: 'Solicitado em' }] }
+  @EndUserText.label: 'Solicitado em'
+  DataSolicitacao;
+
+  @UI.identification: [{ position: 50, label: 'Solicitado por' }]
+  @EndUserText.label: 'Solicitado por'
+  SolicitadoPor;
+
+  @UI: { lineItem: [{ position: 50, label: 'Motivo da decisão' }],
+         identification: [{ position: 60, label: 'Motivo da decisão' }] }
+  @UI.multiLineText: true
+  @EndUserText.label: 'Motivo da decisão'
+  MotivoDecisao;
+
+  @UI.identification: [{ position: 70, label: 'Decidido em' }]
+  @EndUserText.label: 'Decidido em'
+  DataDecisao;
+
+  @UI.identification: [{ position: 80, label: 'Decidido por' }]
+  @EndUserText.label: 'Decidido por'
+  DecididoPor;
+
+  @UI.hidden: true
+  CreatedBy;
+  @UI.hidden: true
+  CreatedAt;
+  @UI.hidden: true
+  LastChangedBy;
+  @UI.hidden: true
+  LastChangedAt;
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

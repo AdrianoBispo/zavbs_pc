@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZPC_MSG</ARBGB>
+    <MASTERLANG>P</MASTERLANG>
+    <STEXT>Pedidos de Compras - Mensagens</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>CPF inválido. Verifique o número informado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Já existe um cliente cadastrado com este CPF.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Cliente inativo não pode realizar pedido.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Cliente não pode ser excluído pois possui pedido vinculado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Cliente selecionado não possui endereço principal válido.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Não foi possível validar o CEP agora. Tente novamente em instantes.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>CEP inválido ou não encontrado. Verifique o número informado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Número do endereço é obrigatório.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Formato de imagem inválido. Utilize JPEG ou PNG.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Já existe item cadastrado com este SKU.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Estoque insuficiente para o item &amp;1 (disponível: &amp;2).</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Estoque do item &amp;1 alterado por outra operação. Atualize e tente de novo.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Item &amp;1 inativo não pode ser usado em novo pedido.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Item possui estoque disponível ou pedido ativo. Inativação bloqueada.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Transição de status não permitida (status atual: &amp;1).</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Pagamento pendente. O pedido não pode ser finalizado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Pedido finalizado não pode ser alterado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Pedido cancelado não pode ser alterado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Informe o motivo do cancelamento.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Pagamento aprovado com sucesso.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Pagamento recusado. O pedido permanecerá aguardando pagamento.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Snapshot do pedido já foi gerado e não pode ser recriado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Campo &amp;1 é obrigatório.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>E-mail em formato inválido.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Data de nascimento não pode ser futura.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>Telefone deve conter 10 ou 11 dígitos (DDD + número).</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>027</MSGNR>
+     <TEXT>Pedido deve possuir ao menos um item.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>028</MSGNR>
+     <TEXT>Quantidade do item deve ser maior que zero.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>029</MSGNR>
+     <TEXT>Preço unitário deve ser maior ou igual a zero.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Qtde em estoque não pode ser negativa nem menor que a reservada (&amp;1).</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Item não pode ser excluído pois está vinculado a pedido ou reserva.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Dados do cartão inválidos: &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>033</MSGNR>
+     <TEXT>Pedido &amp;1 confirmado. Estoque reservado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>034</MSGNR>
+     <TEXT>Pedido &amp;1 finalizado com sucesso.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>035</MSGNR>
+     <TEXT>Pedido &amp;1 cancelado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>036</MSGNR>
+     <TEXT>Erro ao obter numeração (&amp;1). Verifique o intervalo de numeração.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>037</MSGNR>
+     <TEXT>Usuário sem autorização para esta operação.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>038</MSGNR>
+     <TEXT>Reserva do item &amp;1 inconsistente com o pedido.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>039</MSGNR>
+     <TEXT>Pedido só pode ser editado ou excluído no status CRIADO.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>040</MSGNR>
+     <TEXT>Peso e dimensões não podem ser negativos.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>041</MSGNR>
+     <TEXT>Valor inválido para o campo &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>042</MSGNR>
+     <TEXT>Pedido &amp;1 enviado para processamento de reembolso.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>043</MSGNR>
+     <TEXT>Informe o motivo da decisão sobre o reembolso.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>044</MSGNR>
+     <TEXT>Reembolso do pedido &amp;1 aprovado. Pedido cancelado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>045</MSGNR>
+     <TEXT>Reembolso do pedido &amp;1 rejeitado. Pedido retomado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>046</MSGNR>
+     <TEXT>Solicitação de reembolso não está mais pendente.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>047</MSGNR>
+     <TEXT>Já existe um endereço cadastrado com este CEP para este cliente.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZPC_MSG</ARBGB>
+     <MSGNR>048</MSGNR>
+     <TEXT>Item &amp;1 está sem estoque disponível e não pode ser adicionado ao pedido.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

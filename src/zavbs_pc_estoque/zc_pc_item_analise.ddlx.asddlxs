@@ -1,0 +1,127 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName:       'Item',
+                typeNamePlural: 'Itens de estoque' },
+  chart: [{ qualifier:           'DisponivelPorCategoria',
+            title:               'Estoque por categoria',
+            chartType:           #BAR,
+            dimensions:          [ 'Categoria' ],
+            measures:            [ 'QtdeDisponivel', 'QtdeReservada' ],
+            dimensionAttributes: [{ dimension: 'Categoria', role: #CATEGORY }],
+            measureAttributes:   [{ measure: 'QtdeDisponivel', role: #AXIS_1 },
+                                  { measure: 'QtdeReservada',  role: #AXIS_1 }] },
+
+          { qualifier:           'ItensPorSituacao',
+            title:               'Itens por situação do estoque',
+            chartType:           #DONUT,
+            dimensions:          [ 'StatusEstoque' ],
+            measures:            [ 'QtdeItens' ],
+            dimensionAttributes: [{ dimension: 'StatusEstoque', role: #CATEGORY }],
+            measureAttributes:   [{ measure: 'QtdeItens', role: #AXIS_1 }] },
+
+          { qualifier:           'ValorEstoquePorCategoria',
+            title:               'Valor em estoque por categoria',
+            chartType:           #COLUMN,
+            dimensions:          [ 'Categoria' ],
+            measures:            [ 'ValorEstoque' ],
+            dimensionAttributes: [{ dimension: 'Categoria', role: #CATEGORY }],
+            measureAttributes:   [{ measure: 'ValorEstoque', role: #AXIS_1 }] },
+
+          { qualifier:           'ItensMaisReservados',
+            title:               'Itens mais reservados',
+            chartType:           #COLUMN,
+            dimensions:          [ 'Nome' ],
+            measures:            [ 'QtdeReservada' ],
+            dimensionAttributes: [{ dimension: 'Nome', role: #CATEGORY }],
+            measureAttributes:   [{ measure: 'QtdeReservada', role: #AXIS_1 }] },
+
+          { qualifier:           'ItensPorCategoria',
+            title:               'Itens por categoria',
+            chartType:           #DONUT,
+            dimensions:          [ 'Categoria' ],
+            measures:            [ 'QtdeItens' ],
+            dimensionAttributes: [{ dimension: 'Categoria', role: #CATEGORY }],
+            measureAttributes:   [{ measure: 'QtdeItens', role: #AXIS_1 }] }],
+  presentationVariant: [{ sortOrder:      [{ by: 'QtdeDisponivel', direction: #DESC }],
+                          visualizations: [{ type: #AS_CHART, qualifier: 'DisponivelPorCategoria' }] },
+
+                        { qualifier:      'ItensPorSituacao',
+                          sortOrder:      [{ by: 'QtdeItens', direction: #DESC }],
+                          visualizations: [{ type: #AS_CHART, qualifier: 'ItensPorSituacao' }] },
+
+                        { qualifier:      'ValorEstoquePorCategoria',
+                          sortOrder:      [{ by: 'ValorEstoque', direction: #DESC }],
+                          visualizations: [{ type: #AS_CHART, qualifier: 'ValorEstoquePorCategoria' }] },
+
+                        { qualifier:      'ItensMaisReservados',
+                          maxItems:       10,
+                          sortOrder:      [{ by: 'QtdeReservada', direction: #DESC }],
+                          visualizations: [{ type: #AS_CHART, qualifier: 'ItensMaisReservados' }] },
+
+                        { qualifier:      'ItensPorCategoria',
+                          sortOrder:      [{ by: 'QtdeItens', direction: #DESC }],
+                          visualizations: [{ type: #AS_CHART, qualifier: 'ItensPorCategoria' }] }]
+}
+annotate entity ZC_PC_ITEM_ANALISE with
+{
+  @UI.hidden: true
+  ItemUUID;
+
+  @UI: { lineItem:       [{ position: 10, label: 'SKU', importance: #HIGH }],
+         selectionField: [{ position: 40 }] }
+  @EndUserText.label: 'SKU'
+  Sku;
+
+  @UI: { lineItem:       [{ position: 20, label: 'Item', importance: #HIGH }],
+         selectionField: [{ position: 30 }] }
+  @EndUserText.label: 'Item'
+  Nome;
+
+  @UI: { lineItem:       [{ position: 30, label: 'Categoria' }],
+         selectionField: [{ position: 10 }] }
+  @UI.textArrangement: #TEXT_ONLY
+  @EndUserText.label: 'Categoria'
+  Categoria;
+
+  @UI.hidden: true
+  CategoriaTexto;
+
+  @UI: { lineItem:       [{ position: 40, label: 'Situação', importance: #HIGH }],
+         selectionField: [{ position: 20 }] }
+  @UI.textArrangement: #TEXT_ONLY
+  @EndUserText.label: 'Situação do estoque'
+  StatusEstoque;
+
+  @UI.hidden: true
+  StatusEstoqueTexto;
+
+  @UI.hidden: true
+  ItemAtivo;
+
+  @UI.hidden: true
+  Currency;
+
+  @UI: { lineItem:  [{ position: 50, label: 'Em estoque' }],
+         dataPoint: { title: 'Quantidade em estoque' } }
+  @EndUserText.label: 'Quantidade em estoque'
+  QtdeEstoque;
+
+  @UI: { lineItem:  [{ position: 60, label: 'Reservada' }],
+         dataPoint: { title: 'Quantidade reservada' } }
+  @EndUserText.label: 'Quantidade reservada'
+  QtdeReservada;
+
+  @UI: { lineItem:  [{ position: 70, label: 'Disponível', importance: #HIGH }],
+         dataPoint: { title: 'Quantidade disponível' } }
+  @EndUserText.label: 'Quantidade disponível'
+  QtdeDisponivel;
+
+  @UI: { lineItem:  [{ position: 80, label: 'Valor em estoque' }],
+         dataPoint: { title: 'Valor em estoque (R$)' } }
+  @EndUserText.label: 'Valor em estoque'
+  ValorEstoque;
+
+  @UI: { dataPoint: { title: 'Quantidade de itens' } }
+  @EndUserText.label: 'Quantidade de itens'
+  QtdeItens;
+}
